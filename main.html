@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>utml generate</title>
+</head>
+
+<body>
+    <header class="main container">
+        <nav class="main__nav">
+            <img src="/assets/img/main_logo.svg" alt="logo" class="main__logo">
+            <button class="main__btn">
+                <img src="/assets/img/door.svg" alt="Кнопка с изображением">
+                <span>Войти в аккаунт</span>
+            </button>
+        </nav>
+        <h1 class="main__title">Генератор UTM меток для вашей рекламы</h1>
+        <h3 class="main__subtitle">СОЗДАВАЙ. ГРУППИРУЙ. АНАЛИЗИРУЙ</h3>
+        <div class="address inner-container">
+            <h3 class="address__title">Адрес вашей страницы</h3>
+            <form class="address__input">
+                <input type="text" placeholder="http://названиесайта.ru">
+                <button type="button">Проверить</button>
+            </form>
+        </div>
+        <p class="main__about">Подробнее о UTM-метках вы можете узнать <a href="#">здесь</a></p>
+    </header>
+    <seciton class="traffic">
+        <h3 class="traffic__title">Источник трафика</h3>
+        <ul class="traffic__name-param inner-container">
+            <li class="traffic__el">
+                <input type="radio" id="my" name="params" value="my-self" checked>
+                <label for="my">Свои значения</label>
+            </li>
+            <li class="traffic__el">
+                <input type="radio" id="Google" name="params" value="Google_Adwords">
+                <label for="Google">Google Adwords</label>
+            </li>
+            <li class="traffic__el">
+                <input type="radio" id="yandex" name="params" value="yandex">
+                <label for="yandex">Яндекс.Директ</label>
+            </li>
+            <li class="traffic__el">
+                <input type="radio" id="target" name="params" value="target">
+                <label for="target">myTarget</label>
+            </li>
+            <li class="traffic__el">
+                <input type="radio" id="Facebook" name="params" value="Facebook">
+                <label for="Facebook">Facebook</label>
+            </li>
+            <li class="traffic__el">
+                <input type="radio" id="Instagram" name="params" value="Instagram">
+                <label for="Instagram">Instagram</label>
+            </li>
+        </ul>
+        <div class="traffic__param-list inner-container">
+            <div class="param-list__item active">
+                <div class="item-key">
+                    <p class="item-key__name">utm_source</p>
+                    <div class="desc">
+                        <span>Источник кампании</span>
+                        <p>yandex, google, fb..</p>
+                    </div>
+                </div>
+                <div class="item-about">
+
+                </div>
+            </div>
+            <div class="param-list__item active">
+                <div class="item-key">
+                    <p class="item-key__name">utm_medium</p>
+                    <div class="desc">
+                        <span>Тип трафика</span>
+                        <p>cpc, cpm, e-mail</p>
+                    </div>
+                </div>
+                <div class="item-about">
+
+                </div>
+            </div>
+            <div class="param-list__item active">
+                <div class="item-key">
+                    <p class="item-key__name">utm_campaign</p>
+                    <div class="desc">
+                        <span>Название кампании</span>
+                        <p>discount, sale.</p>
+                    </div>
+                </div>
+                <div class="item-about">
+                    Вместо {campaign_id} Яндекс.Директ автоматически подставит ID кампании
+                </div>
+            </div>
+            <div class="param-list__item">
+                <div class="item-key">
+                    <p class="item-key__name">utm_content</p>
+                    <div class="desc">
+                        <span>Идентификатор объявления</span>
+                        <p>link, site</p>
+                    </div>
+                </div>
+                <div class="item-about">
+                    Вместо {ad_id} Яндекс.Директ автоматически подставит ID объявления, а {source} заменит на домен
+                    площадки при показе на
+                    сайте РСЯ; none — при показе на поиске Яндекса
+                </div>
+            </div>
+            <div class="param-list__item">
+                <div class="item-key">
+                    <p class="item-key__name">utm_term</p>
+                    <div class="desc">
+                        <span>Ключевое слово</span>
+                        <p>vhod, registraciya</p>
+                    </div>
+                </div>
+                <div class="item-about">
+                    Вместо {keyword} Яндекс.Директ автоматически подставит ключевое слово
+                </div>
+            </div>
+
+        </div>
+    </seciton>
+</body>
+
+</html>
